@@ -1,3 +1,8 @@
+---
+layout:post
+title: "Third"
+---
+
 # 세번째다
 
 
