@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "air" #"default", "air", "aqua", "contrast", "dark", 
 
 # Site Settings
 locale                   : "ko-KR" #"en-US" #언어 설정이다.
-title                    : "yechankorea "#"Site Title"     # 블로그 이름
+title                    : "yechankorea" # "Site Title"     # 블로그 이름
 title_separator          : "-"    
 subtitle                 : # site tagline that appears below site title in masthead # 부제목으로, 블로그 이름 밑에 작게 표시
 name                     : "yechankorea"  #이름
