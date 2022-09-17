@@ -21,7 +21,7 @@ title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead # 부제목으로, 블로그 이름 밑에 작게 표시
 name                     : "yechankorea"  #이름
 description              : "An amazing website."  # 설명
-url                      : "https://yechankorea.github.io"
+# url                      : "https://yechankorea.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -113,16 +113,12 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:chunyechan1@gmail.com" # "mailto:your.name@email.com"
-#    - label: "Website"
-#      icon: "fas fa-fw fa-link"
-#      # url: "https://your-website.com"
+
 
     # - label: "GitHub"
     #   icon: "fab fa-fw fa-github"
     #   url: "https://github.com/yechankorea"
-#    - label: "Instagram"
-#      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+
 
 # Site Footer
 footer:
