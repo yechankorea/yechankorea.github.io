@@ -95,21 +95,31 @@ graph f is abobe all its **tangent hyperplanes**
 
 ![image-20220918004537059](../images/2022-09-17-3post/image-20220918004537059.png)
 
-lemma (i)는 **nonnegative linear combination**으로 convex f함수들에 음수가 아닌 람다 
-$$
-\lambda
-$$
-에 대한 선형 조합 
-$$
-\lambda f
-$$
-들은 **convex**이다.
+lemma (i)는 **nonnegative linear combination**으로 *convex f함수들*에 음수가 아닌 *람다*에 대한 선형 조합들은 **convex**이다.
+
+lemma(ii)는 m차원->d차원 으로 매핑하는 함수 *g(x) = Ax+b* 가 있을때 *f(Ax+b)* 는 **convex**이다. 
 
 
 
+## Local minima are Global minima
+
+![image-20220918010337589](../images/2022-09-17-3post/image-20220918010337589.png)
 
 
 
+로컬 미니멈 정의와,  **컨백스 함수에서는 로컬 미니멈이 글로벌 미니멈** 에 대한 증명.
 
+## Critical Points are Global minima
 
+![image-20220918010709357](../images/2022-09-17-3post/image-20220918010709357.png)
+
+**함수가 open domain에 미분가능 할 때** 
+
+**critical points(임계점) 일때 -> Global minimum 이다.**
+
+이는 *First-order characterization of convexity* 이용해서 증명가능.
+
+---
+
+1일차 수업 끝.
 
