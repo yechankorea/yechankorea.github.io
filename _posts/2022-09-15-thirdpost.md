@@ -1,9 +1,11 @@
 ---
-layout:post
-title: "Third"
+layout: single
+title: "sample"
+categories: optimization
+tag: [python,blog,jekyll]
 ---
 
-# 세번째다
+# 파이썬 샘플.
 
 
 본문
