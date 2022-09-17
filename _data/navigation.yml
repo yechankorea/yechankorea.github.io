@@ -3,7 +3,7 @@ main:
   - title: "Quick-Start Guide"
     url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Study"
-    url: https://mmistakes.github.io/minimal-mistakes/Study/
+    url: https:/Study"                                       # default https://mmistakes.github.io/minimal-mistakes/Study/
   - title: "Sample Posts"
     url: /year-archive/
   - title: "Sample Collections"
