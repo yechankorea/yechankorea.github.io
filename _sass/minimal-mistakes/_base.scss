@@ -126,6 +126,10 @@ blockquote {
 /* links */
 
 a {
+
+
+  text-decoration: none;                // 추가된 코드입니다.( 제목에 하이퍼링크 붙는거 없앨려고 함)
+
   &:focus {
     @extend %tab-focus;
   }
