@@ -21,7 +21,7 @@ title: "Varitaional inference"
 
 우리의 목표는 Neural Network의 parameter인 $w$를 찾는 것이다. 하지만 그냥 찾는 것은 쉽다. Loss를 설정해주고 Gradient Descent 알고리즘을 돌리면 되기 때문이다. 이 걸 **Frequentest View**라고 했었다. 우리는 $w$의 값만 알고 싶은 것이 아니라 $w$의 분포, 즉 Posterior를 알고 싶다. 이 걸 **Bayesian View**라고 했었다. 그러면 Posterior를 구하기 위해 Bayesian Equation을 적어보도록 하자.
 
-![image-20220928203924779](../images/2022-09-28-Variational Inference/image-20220928203924779.png)
+![image-20220928203924779](../images/2022-09-28-Variational_Inference/image-20220928203924779.png)
 
 먼저 우리가 구하고자 하는 **Posterior** $p(w\mid D)$는 Train Data D가 주어졌을 때 이를 가장 잘 재현하기 위한 parameter $w$가 있을 텐데, 이 값을 정확히 뭐라고 확정 짓지 않고 확률 분포로 대답한 결과라고 했었다. 이 Posterior는 우리가 구해야 할 값이기도 하다. 
 
@@ -35,7 +35,7 @@ title: "Varitaional inference"
 
 어찌어찌 위의 문제가 잘 해결되어 $w$의 Posterior $p(w\mid D )$를 구해 냈다고 치자. **MAP**에서는 **Posterior가 최대가 되는 $w$ 값**을 구해서 이 $w$로 이루어 진 Neural Network를 통과시켜, 그대로 Output을 얻기만 하면 됐었다. 하지만 Posterior를 정확히 알고 있는 지금, MAP에서 처럼 Posterior가 최대가 되는 $w$를 찾아 쓰기만 하면 될까? 이럴 거였으면 고생해가면서 Posterior를 구할 이유도 없었다. **MAP**랑 다를 것이 없기 때문이다. Posterior를 온전히 알고 있으면 우리는 **$w$에 따른 Output의 기댓값**을 구할 수 있게 된다. MAP에 비해 Posterior 전체에 담긴 정보를 훨씬 많이 반영한 결과이기 때문에 더 신뢰할 수 있는 output이라고 할 수 있다. 그리고 output의 기댓값은 다음 식을 통해 구할 수 있다.
 
-![image-20220928205247843](../images/2022-09-28-Variational Inference/image-20220928205247843.png)
+![image-20220928205247843](../images/2022-09-28-Variational_Inference/image-20220928205247843.png)
 
 눈치 채셨겠지만, **또 적분**이다. 그것도 그냥 적분이 아니라 위에서 말한 것 처럼 매우 고차원에다가 개수까지 많은 $w$에 대한 적분이다. 이 적분 역시 현실적으로 계산하는 것이 **불가능**하다.
 
@@ -45,15 +45,15 @@ title: "Varitaional inference"
 
 먼저 $q(w\mid \theta)$가 $p(w\mid D)$를 얼마나 잘 흉내내고 있는지의 척도를 정의해 줄 필요가 있다. 이 척도만 있다면 Deep Learning에서의 Loss처럼 써먹을 수 있을 것 같다. 두 Distribution이 얼마나 닮았는지를 비교하는 척도로는 KL- Divergence가 있는데, 다음과 같이 정의된다.(정의 유도는 KL-Divergence post) 
 
-![image-20220928210145031](../images/2022-09-28-Variational Inference/image-20220928210145031.png)
+![image-20220928210145031](../images/2022-09-28-Variational_Inference/image-20220928210145031.png)
 
 우리는 $w$를 연속으로 가정하고 있기 때문에 포스트와는 다르게 Integral 형태로 식을 작성하였다. 이제 위 식에 Bayesian Equation을 적용시키면 다음과 같이 전개할 수 있다.
 
-![image-20220928212711398](../images/2022-09-28-Variational Inference/image-20220928212711398.png)
+![image-20220928212711398](../images/2022-09-28-Variational_Inference/image-20220928212711398.png)
 
 여기서 $\mathbb{E}_q [log\;p(D)]$는 $q$와 무관하므로 제거하면 최종적으로 우리는 다음 식을 **Minimize** 하는 $\theta$를 찾아야 한다. 
 
-![image-20220928213546687](../images/2022-09-28-Variational Inference/image-20220928213546687.png)
+![image-20220928213546687](../images/2022-09-28-Variational_Inference/image-20220928213546687.png)
 
 그렇게 $\theta$를 찾으면, 완벽히 같진 않겠지만 우리는 **$q(w\mid \theta)$를 $w$의 Posterior**라고 주장할 수 있게 된다.
 
