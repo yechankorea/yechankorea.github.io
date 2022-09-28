@@ -13,7 +13,7 @@ title: "Varitaional inference"
 
  **MLE**는 Likelihood만 주어진 경우 이를 최대로 하는 parameter를 찾는 일이고 **MAP**는 Likelihood와 사전 지식인 Prior가 전부 주어진 경우 Posterior를 최대로 하는 parameter를 찾는 일이었습니다.
 
- 하지만 이런 방식으로 **parameter $w$**를 구하는 일은 아직 **Bayesian View**라고 할 수 없습니다.
+ 하지만 이런 방식으로 **parameter** $w$를 구하는 일은 아직 **Bayesian View**라고 할 수 없습니다.
 
  **$w$의 분포를 구하는 게 아니라 $w$의 값을 확정짓는 방법들이기 때문**입니다. 우리가 알고자 하는 **Bayesian View**는 구하고자 하는 값인 $w$의 확률 분포, 즉 **posterior**입니다. MAP에서 구하지 않냐구요? MAP에서조차 posterior를 최대로 하는 $w$를 구할 뿐 posterior를 정확히 구하지는 않습니다. 이번 포스팅을 시작으로 $w$의 분포, 즉 **posterior**를 구함으로 인해 진정한 Bayesian View에 접근해 나가도록 하겠습니다.
 
