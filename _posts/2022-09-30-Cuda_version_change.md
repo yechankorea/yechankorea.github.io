@@ -3,9 +3,13 @@ layout: single
 title: "Cuda version change"
 ---
 
+**윈도우에서 cuda_version 바꾸는 법**
+
 사용하고 싶은 cuda 다운받은 후에
 
 윈도우+R
+
+
 
 ![image-20220930004052160](../images/2022-09-30-Cuda_version_change/image-20220930004052160.png)
 
