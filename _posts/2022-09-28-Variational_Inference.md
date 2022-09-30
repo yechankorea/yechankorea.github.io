@@ -25,7 +25,7 @@ title: "Varitaional inference"
 
 먼저 우리가 구하고자 하는 **Posterior** $p(w\mid D)$는 Train Data D가 주어졌을 때 이를 가장 잘 재현하기 위한 parameter $w$가 있을 텐데, 이 값을 정확히 뭐라고 확정 짓지 않고 확률 분포로 대답한 결과라고 했었다. 이 Posterior는 우리가 구해야 할 값이기도 하다. 
 
-다음은 **Likelihood**$ p(D\mid w)$이다. 이 분포는 MLE&MAP 포스터에서 살펴 봤듯이 보통 Gaussian으로 가정한다. 
+다음은 **Likelihood** $p(D\mid w)$이다. 이 분포는 MLE&MAP 포스터에서 살펴 봤듯이 보통 Gaussian으로 가정한다. 
 
 그 옆에는 **Prior** $p(w)$가 있는데, 이 분포는 우리의 사전 지식에 의해 설정되는 분포다. 사전 지식이 없다면 Prior를 설정해줌으로 인해 우리가 원하는 방향의 $w$가 구해지게끔 할 수도 있다.
 
