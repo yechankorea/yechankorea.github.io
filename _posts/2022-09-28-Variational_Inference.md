@@ -57,7 +57,7 @@ title: "Varitaional inference"
 
 그렇게 $\theta$를 찾으면, 완벽히 같진 않겠지만 우리는 **$q(w\mid \theta)$를 $w$의 Posterior**라고 주장할 수 있게 된다.
 
-왼쪽 항인 저 $D_{KL}[q(w\mid \theta )\mid \mid p(w)]$은 $D_{KL}[q(w\mid \theta)\mid \mid p(w|D)]$과는 달리 계산 가능한 값이다. $p(w)$도 알고 $q(w\mid \theta)$는 우리가 정의해주는 분포이기 때문이다. 
+왼쪽 항인 저 $D_{KL}[q(w\mid \theta )\mid \mid p(w)] 은 D_{KL}[q(w\mid \theta)\mid \mid p(w|D)]$  과는 달리 계산 가능한 값이다. $p(w)$도 알고 $q(w\mid \theta)$는 우리가 정의해주는 분포이기 때문이다. 
 
 오른 쪽항인 $\mathbb{E}_q[log\; ⁡p(D\mid w)]$가 보인다. 기댓값 안에 있는 $log\; ⁡p(D\mid w)$는 **Likelihood**이다. 이 값을 Maximize 시킨다는 것인데, 이는 Maximum Likelihood Estimation(MLE)에 해당하기 때문에 일반적인 Neural Network를 학습시키는 일과 동치이다.(MLE&MLP post)
 
@@ -77,7 +77,9 @@ $\mathbb{E}_q[log\; p(D\mid w)]$를 $q(w\mid \theta)$로부터 Sampling된 $w$�
 
 ![image-20220930014229389](../images/2022-09-28-Variational_Inference/image-20220930014229389.png)
 
-여기서 헷갈리면 안되는 게, 우리는 기존의 딥러닝처럼 $w_i$를 업데이트하는 것이 아니다. $\mu _i$ 와 $\sigma_i$를 업데이트 할 것이고, 이로부터 $w_i$가 sampling 되도록 할 것이다. 이제 정의해줘야 할 것들이 전부 충족되었으니, 다음 식을 통해 $D_{KL}[q(w_i\mid \mu_i, \sigma_i )\mid \mid p(w)]$를 먼저 계산해 놓도록 하자.
+여기서 헷갈리면 안되는 게, 우리는 기존의 딥러닝처럼 $w_i$를 업데이트하는 것이 아니다.
+
+ $\mu _i와\sigma_i$를 업데이트 할 것이고, 이로부터 $w_i$가 sampling 되도록 할 것이다. 이제 정의해줘야 할 것들이 전부 충족되었으니, 다음 식을 통해 $D_{KL}[q(w_i\mid \mu_i, \sigma_i )\mid \mid p(w)]$를 먼저 계산해 놓도록 하자.
 
 ![image-20220930014433886](../images/2022-09-28-Variational_Inference/image-20220930014433886.png)
 
